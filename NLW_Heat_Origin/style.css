@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  /* Variaveis de cores */
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.png);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--gray);
+}
+
+.avatar {
+  /* Calcular rem
+  1rem = 16px
+  (px's)/16 = valor de px's em rem
+  */
+  width: 10rem;
+
+  /*  Margin: 
+  0 0 0 0 -> top, right, bottom, left
+  0 0 0 -> top, (right, left), bottom
+  0 0 -> (top, bottom), (right, left)
+  */
+  margin: 11.5rem auto 0;
+
+  /* Quando temos um 'absolute' dentro de um 'relative', o 'relative' vira limite para o absolute */
+  position: relative;
+}
+
+.avatar span {
+  /* Quando temos um 'absolute' dentro de um 'relative', o 'relative' vira limite para o absolute */
+  position: absolute;
+  top: -15px;
+
+  /* Devolvendo a posição que o clip-path tirou */
+  z-index: 1;
+}
+
+/* O sinal '>' serve para pegamos a img no primeiro nível e não todas imagens */
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  /* Criar um exagono com a imagem */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  /* Alinhando a img do github */
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  /* Removendo style de lista */
+  list-style: none;
+  padding: 0;
+
+  /* Display flex deixa um ao lado do outro */
+  display: flex;
+  gap: 0.5rem;
+  /* 
+  Deixando os elementos da lista um abaixo do outro, por default a direção é em linha.
+  flex-direction: column; 
+  */
+
+  justify-content: center;
+}
