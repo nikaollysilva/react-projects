@@ -19,16 +19,22 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="http://lorempixel.com/185/185/people/" alt="Foto pessoal" />
+          <img
+            id="userImage"
+            src="http://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+          />
         </div>
 
         <h1 id="userName">User Name</h1>
-        <a href="https://www.linkedin.com/in/nikolly-santos-23405619a/">
+        <a id="userLink">
           <img src="images/github.svg" alt="ícone github" />
-          nikaollysilva</a
-        >
+          <span id="userNameGithub">github user</span>
+        </a>
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">
+          An instructor focused on helping people start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -44,7 +50,7 @@
           </li>
 
           <li class="facebook">
-            <a href="https://www.youtube.com/" target="_blank">
+            <a href="https://www.linkedin.com/" target="_blank">
               <img src="images/facebook.svg" alt="ícone facebook" />
             </a>
           </li>
@@ -58,25 +64,6 @@
       </div>
     </main>
 
-    <script>
-      const linksSocialMedia = {
-        github: 'nikaollysilva',
-        youtube: '/channel/UClpBtryxMyHEzm8cptb_hYQ',
-        facebookLinkedin: '/in/nikolly-santos-23405619a/',
-        instagram: '',
-        twitter: '',
-        name: 'Nikolly'
-      }
-
-      function changeSocialMediaLinks() {
-        userName.textContent = 'Nikolly Silva'
-
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
